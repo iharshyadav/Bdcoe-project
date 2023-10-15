@@ -43,7 +43,7 @@ const page=()=>{
                   deleteNote(i);
                  }}
                     className="income-list-2-button">Delete</button>
-                  </div>
+                </div>
             </li> 
           </>  
         )
@@ -74,6 +74,7 @@ const page=()=>{
     <>
     <Header totalIncome={totalIncome}/>
     <h2><span>Simple way</span> <br /> to manage <span>personal expenses</span></h2>
+    <div className="phone"><span>Simple way</span> <br /> to manage <span> <br />personal expenses</span></div>
     <Form income={income} setIncome={setIncome}/>
     {/* <div className="w-2/3 h-15 text-black">{(income.length > 0) ? income[0].desc : " "}</div> */}
     <hr/>
