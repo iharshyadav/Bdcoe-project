@@ -37,11 +37,11 @@ const form = ({income,setIncome}) => {
         <div className="inner-elem">
           <h3>Description:</h3>
           <input className='submit1' type="text" name="desc" id="desc"
-            placeholder='Description.... ' ref={desc}/>
+            placeholder=' Description.... ' ref={desc}/>
             <h3>Amount:</h3>
-          <input className='submit2' type="number" name='price' id='price' placeholder='Amount' ref={price} />
+          <input className='submit2' type="number" name='price' id='price' placeholder=' Amount...' ref={price} />
           <h3>Date:</h3>
-          <input className='submit3' type="date" name='date' id='date' placeholder='Amount date... ' ref={date}/>
+          <input className='submit3' type="date" name='date' id='date' placeholder=' Amount date... ' ref={date}/>
           <input className='submit' type="submit" value="Add Income" />
         </div> 
     </form>

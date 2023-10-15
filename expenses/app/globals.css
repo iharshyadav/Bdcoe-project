@@ -110,10 +110,6 @@ h2 span{
 	color: white;
 }
 
-.submit:hover{
-	padding: 0.45vw;
-  }
-
 .submit1{
 	margin-left: 6vw;
 	width: 17vw;
@@ -194,9 +190,9 @@ hr{
 	font-size: 0.9vw;
   }
 
-h5{
+  .income-list-1 h5{
 	/* margin-top: 10vh;	 */
-	text-align: center;
+	text-align: left;
 }
 
 .list-description{
@@ -215,11 +211,19 @@ h5{
 	margin-left: 6vw;
   }
 
+  .list-date{
+	width: 30%;
+  }
+
   .phone{
 	display: none;
   }
 
   h3{
+	display: none;
+  }
+
+  .phone-income-list{
 	display: none;
   }
   
@@ -275,6 +279,7 @@ h5{
 	width: 90%;
 	margin-left: 5.2vw;
 	/* align-items: center; */
+	border-radius: 2vw;
    }
   
    h3{
@@ -282,7 +287,6 @@ h5{
    }
 
    .inner-elem {
-	position: relative;
 	z-index: 1;
 	display: flex;
 	justify-content: flex-start;
@@ -290,47 +294,109 @@ h5{
 	border-radius: 8px;
 	flex-direction: column;
    }
+
+   h3{
+	width: 120%;
+	font-weight: 600;
+	margin-bottom: 0.7vh;
+	text-align:start;
+	margin-left: 0;
+	font-size: large;
+   }
   
    .submit1{
-	/* margin-left: 6vw; */
-	width: 17vw;
+	width: 120%;
+	height: 5.8vh;
 	border-radius: 0.5vw;
-   }
-
-   .submit1:hover{
-	border:2px black solid;
+	align-items: flex-start;
+	border: 1px solid black;
+	margin-bottom: 4vh;
+	margin-left: 0;
+	border-radius: 2vw;
    }
 
    .submit2{
-	/* margin-left: 6vw; */
-	width: 10vw;
+	width: 120%;
 	border-radius: 0.5vw;
-   }
-
-   .submit2:hover{
-	border:2px black solid;
+	/* margin: 0; */
+	border: 1px solid black;
+	height: 6vh;
+	/* margin-top: 2vh; */
+	margin-left: 0;
+	margin-bottom: 4vh;
+	border-radius: 2vw;
    }
 
    .submit3{
-	/* margin-left: 6vw; */
-	width: 10vw;
+	width: 120%;
 	border-radius: 0.5vw;
+	/* margin-top: 2vh; */
+	margin-left: 0;
+	border: 1px solid black;
+	height: 5.9vh;
+	margin-bottom: 3vh;
+	border-radius: 2vw;
    }
+  
+   .submit{
+	margin-top: 7vh;
+	padding: 3vw;
+	margin-left: 0;
+   }
+  
+   .main-income-list{
+	width: 100%;
+	margin-left: 0;
+   }
+  
+  .income-list{
+	display: none;
+  }
 
-   .submit3:hover{
-	border:2px black solid;
-   }
+  .phone-income-list{
+	display: block;
+  }
+
+  .inner-phone-income-list{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	min-height: 5vh;
+  }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  .phone-income-list-1{
+    width: 45%;
+	text-align: left;
+	text-transform: uppercase;
+  }
+
+  .phone-list-description{
+	color: black;
+	/* font-size: 1.2vw; */
+	font-family: sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	width: 55%;
+	overflow: hidden;
+	text-align: left;
+	padding:1vh 0 ;
+	margin-top: 2.5vh;
+  }
+
+  .phone-list-price{
+	color: #2EB84C;
+	width: 25%;
+  }
+
+  .phone-income-list-2-button{
+	/* padding: 5vw; */
+	width: 20%;
+	color: red;
+	font-size: 5vw;
+  }
+
+
+
   }
 
 

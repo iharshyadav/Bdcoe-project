@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/Component/Header";
 import Form from "@/Component/Form";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 const page=()=>{
 
   const getItemLocal=()=>{
@@ -34,7 +37,7 @@ const page=()=>{
             <li className="income-list">
                <div key={i} className="income-list-1">
                  <h5 className="list-description">{t.desc}</h5>
-                 <p className="list-price">{t.price}</p>
+                 <p className="list-price">+{t.price}</p>
                  <p className="list-date">{t.date}</p>
                </div> 
                <div className="income-list-2">
@@ -43,6 +46,22 @@ const page=()=>{
                   deleteNote(i);
                  }}
                     className="income-list-2-button">Delete</button>
+                </div>
+            </li> 
+            <li className="phone-income-list">
+               <div className="inner-phone-income-list">
+                   <div key={i} className="phone-income-list-1">
+                     <h5 className="phone-list-description">{t.desc}</h5>
+                     <p className="phone-list-date">{t.date}</p>
+                   </div> 
+                   <p className="phone-list-price">+{t.price}</p>
+                   <div className="phone-income-list-2">
+                     <button
+                     onClick={()=>{
+                      deleteNote(i);
+                     }}
+                        className="phone-income-list-2-button fa-lg"> <FontAwesomeIcon icon={faTrash}/> </button>
+                    </div>       
                 </div>
             </li> 
           </>  
