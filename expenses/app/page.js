@@ -3,7 +3,19 @@ import React, { useEffect, useState } from "react";
 import Header from "@/Component/Header";
 import Form from "@/Component/Form";
 const page=()=>{
-    const [income, setIncome] = useState([])
+
+  const getItemLocal=()=>{
+    let expenses = localStorage.getItem("expenses");
+
+    if(expenses){
+      return JSON.parse(localStorage.getItem("expenses"));
+    }
+    else{
+      return [];
+    }
+  }
+
+    const [income, setIncome] = useState(getItemLocal())
     const [totalIncome, settotalIncome] = useState(0);
 
 
@@ -13,7 +25,7 @@ const page=()=>{
       setIncome(copyTask);
  }
 
-    let renderTask=<h5>No Task Available</h5>
+    let renderTask=<h5>No Expenditure Available</h5>
 
     if(income.length > 0){
       renderTask=income.map((t,i)=>{
@@ -21,26 +33,38 @@ const page=()=>{
           <>
             <li className="income-list">
                <div key={i} className="income-list-1">
-                 <h5 className="description">{t.desc}</h5>
-                 <p className="text-xl ">{t.price}</p>
-                 <p className="text-xl ">{t.date}</p>
+                 <h5 className="list-description">{t.desc}</h5>
+                 <p className="list-price">{t.price}</p>
+                 <p className="list-date">{t.date}</p>
                </div> 
-               <button
+               <div className="income-list-2">
+                 <button
                  onClick={()=>{
                   deleteNote(i);
                  }}
-                  className="income-list-2">Delete</button>
+                    className="income-list-2-button">Delete</button>
+                  </div>
             </li> 
           </>  
         )
       })
     }
+
+    useEffect(()=>{
+      localStorage.setItem("expenses",JSON.stringify(income))
+   },[income])
   
     
     useEffect(() => {
       let temp = 0;
       for(let i = 0; i < income.length; i++) {
-        temp += parseInt(income[i].price);
+        if(income[i].price==0)
+        {
+          // temp = parseInt(income[i-1].price);
+        }
+        else{
+          temp += parseInt(income[i].price);
+        }
       }
   
       settotalIncome(temp);
@@ -49,10 +73,11 @@ const page=()=>{
   return(
     <>
     <Header totalIncome={totalIncome}/>
+    <h2><span>Simple way</span> <br /> to manage <span>personal expenses</span></h2>
     <Form income={income} setIncome={setIncome}/>
     {/* <div className="w-2/3 h-15 text-black">{(income.length > 0) ? income[0].desc : " "}</div> */}
     <hr/>
-    <div>
+    <div className="main-income-list">
        <ul>{renderTask}</ul>
     </div>
     </>
