@@ -28,7 +28,7 @@ const page=()=>{
       setIncome(copyTask);
  }
 
-    let renderTask=<h5>No Expenditure Available</h5>
+    let renderTask=<h5 className="list-no-task">No Expenditure Available</h5>
 
     if(income.length > 0){
       renderTask=income.map((t,i)=>{

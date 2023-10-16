@@ -108,6 +108,17 @@ h2 span{
 	margin-left: 6vw;
 	background-color: #2EB84C;
 	color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow,transform;
+	transition-property: box-shadow,transform;
+}
+
+.submit:hover , .submit:focus , .submit:active{
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .submit1{
@@ -225,6 +236,10 @@ hr{
 
   .phone-income-list{
 	display: none;
+  }
+
+  .list-no-task{
+	text-align: center;
   }
   
   @media (max-width:600px) {
@@ -372,20 +387,25 @@ hr{
 
   .phone-list-description{
 	color: black;
-	/* font-size: 1.2vw; */
+	font-size: 5.5vw;
 	font-family: sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
 	width: 55%;
 	overflow: hidden;
 	text-align: left;
-	padding:1vh 0 ;
+	padding:1vh 0 0 0 ;
 	margin-top: 2.5vh;
   }
 
   .phone-list-price{
 	color: #2EB84C;
 	width: 25%;
+  }
+
+  .phone-list-date{
+	color: var(--grey);
+	font-size: 3.5vw;
   }
 
   .phone-income-list-2-button{
