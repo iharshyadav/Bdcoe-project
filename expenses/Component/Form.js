@@ -14,8 +14,6 @@ const form = ({income,setIncome}) => {
 
     const AddIncome= e =>{
       e.preventDefault();
-      let d = desc.current.value.split("-");
-      // let newDate=new Date[d[0],d[1]-1,d[2]];
 
       setIncome([...income,{
         "desc": desc.current.value,
